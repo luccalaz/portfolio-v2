@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    @apply scroll-smooth
+}
+
+.navlink:not(.active) {
+    @apply hover:text-zinc-300 border border-transparent hover:bg-zinc-800
+}
+
+.navlink.active {
+    @apply text-zinc-200 bg-zinc-800 border border-zinc-700
+}
+
+.m-navlink:not(.active) {
+    @apply hover:bg-zinc-800
+}
+
+.m-navlink.active {
+    @apply bg-zinc-800 text-zinc-200
+}
+
+nav {
+    @apply transition-transform duration-500
+}
+
+nav.show {
+    @apply translate-y-0
+}
+
+nav:not(.show) {
+    @apply -translate-y-[110%]
+}
