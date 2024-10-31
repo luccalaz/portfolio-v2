@@ -16,8 +16,12 @@ nav.show {
   @apply translate-y-0;
 }
 
+nav#mobile.show {
+  @apply translate-y-16;
+}
+
 nav:not(.show) {
-  @apply -translate-y-[110%];
+  @apply -translate-y-full;
 }
 
 .menu-icon {
