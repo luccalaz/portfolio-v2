@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Image from 'next/image'
 import Typed from "typed.js";
+import Reveal from "./Reveal";
 
 interface StartSectionProps {
   sections: {
@@ -37,7 +39,7 @@ const StartSection: React.FC<StartSectionProps> = ({ sections }) => {
     <header id="start" className="h-screen" ref={sections.start}>
       <div className="flex items-center h-full text-white bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/hero-bg.jpg)` }}>
         <div className="container flex justify-between">
-          <div className="flex-shrink flex flex-col justify-center gap-5">
+          <Reveal staggerChildren className="flex-shrink flex flex-col justify-center gap-5">
             <div className="text-4xl font-bold md:text-6xl">
               <div>{"Hello,"}</div>
               <div>
@@ -60,8 +62,10 @@ const StartSection: React.FC<StartSectionProps> = ({ sections }) => {
                 <span className="text">GitHub</span>
               </a>
             </div>
-          </div>
-          <img className="hidden xl:block" src="/images/hero-img.png" width={500} alt="Illustration of a developer in a cartoonish style."/>
+          </Reveal>
+          <Reveal className="w-[800px] hidden xl:block" transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7}} >
+            <Image className="hidden xl:block" src="/images/hero-img.png" width={500} height={500} alt="Illustration of a developer in a cartoonish style."/>
+          </Reveal>
         </div>
       </div>
     </header>
