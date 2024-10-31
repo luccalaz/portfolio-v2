@@ -2,58 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Styles */
 * {
-    @apply scroll-smooth
+  @apply scroll-smooth;
 }
 
-/* navlink styles */
-.navlink:not(.active) {
-    @apply hover:text-zinc-300 border border-transparent hover:bg-zinc-800
-}
-
-.navlink.active {
-    @apply text-zinc-200 bg-zinc-800 border border-zinc-700
-}
-
-.m-navlink:not(.active) {
-    @apply hover:bg-zinc-800
-}
-
-.m-navlink.active {
-    @apply bg-zinc-800 text-zinc-200
-}
-
-/* navbar styles */
+/* Navbar Styles */
 nav {
-    @apply transition-transform duration-500
+  @apply transition-transform duration-500 shadow-md;
 }
 
 nav.show {
-    @apply translate-y-0
+  @apply translate-y-0;
 }
 
 nav:not(.show) {
-    @apply -translate-y-[110%]
+  @apply -translate-y-[110%];
 }
 
+.menu-icon {
+  @apply p-3 rounded-lg border border-zinc-700 text-zinc-200 transition-colors cursor-pointer hover:bg-zinc-800;
+}
+
+/* Navlink Styles */
 .navlink {
-    @apply px-3 py-1 transition-colors rounded-md;
+  @apply px-3 py-1 rounded-md transition-colors border border-transparent;
 }
-  
-.navlink:hover,
+
 .navlink.active {
-  @apply text-white bg-zinc-800;
+  @apply text-zinc-100 bg-zinc-800 border-zinc-700;
 }
 
+.navlink:not(.active):hover {
+  @apply text-zinc-300 bg-zinc-800;
+}
+
+/* Mobile Navlink Styles */
 .m-navlink {
-  @apply px-5 py-2 transition-colors rounded-md;
+  @apply px-5 py-2 rounded-md transition-colors;
 }
 
-.m-navlink:hover,
 .m-navlink.active {
-  @apply text-white bg-zinc-800;
+  @apply text-zinc-200 bg-zinc-800;
 }
 
+.m-navlink:not(.active):hover {
+  @apply text-zinc-300 bg-zinc-800;
+}
+
+/* Button Styles */
 .btn {
   @apply text-sm md:text-base px-5 py-2 rounded-lg transition-colors text-white;
 }
@@ -78,6 +75,7 @@ nav:not(.show) {
   @apply hidden md:block;
 }
 
+/* Container Styles */
 .container {
   @apply mx-auto w-[90vw] md:w-[80vw];
 }
@@ -86,10 +84,7 @@ nav:not(.show) {
   @apply container flex gap-10 py-10;
 }
 
-.menu-icon {
-  @apply p-3 transition-colors rounded-lg border cursor-pointer text-zinc-200 border-zinc-700 hover:bg-zinc-800;
-}
-
+/* Mobile Menu Styles */
 .mobile-menu {
-  @apply container flex flex-col gap-3 py-5 text-lg;
+  @apply container flex flex-col gap-3 py-5 text;
 }
