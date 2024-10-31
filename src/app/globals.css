@@ -6,6 +6,7 @@
     @apply scroll-smooth
 }
 
+/* navlink styles */
 .navlink:not(.active) {
     @apply hover:text-zinc-300 border border-transparent hover:bg-zinc-800
 }
@@ -22,6 +23,7 @@
     @apply bg-zinc-800 text-zinc-200
 }
 
+/* navbar styles */
 nav {
     @apply transition-transform duration-500
 }
@@ -33,3 +35,61 @@ nav.show {
 nav:not(.show) {
     @apply -translate-y-[110%]
 }
+
+.navlink {
+    @apply px-3 py-1 transition-colors rounded-md;
+  }
+  
+  .navlink:hover,
+  .navlink.active {
+    @apply text-white bg-zinc-800;
+  }
+  
+  .m-navlink {
+    @apply px-5 py-2 transition-colors rounded-md;
+  }
+  
+  .m-navlink:hover,
+  .m-navlink.active {
+    @apply text-white bg-zinc-800;
+  }
+  
+  .btn {
+    @apply text-sm md:text-base px-5 py-2 rounded-lg transition-colors text-white;
+  }
+  
+  .btn-primary {
+    @apply bg-zinc-700 hover:bg-zinc-800;
+  }
+  
+  .btn-outline {
+    @apply border border-zinc-600 hover:bg-zinc-800;
+  }
+  
+  .btn-icon {
+    @apply flex items-center gap-3 px-3;
+  }
+  
+  .btn-icon .icon {
+    @apply scale-125;
+  }
+  
+  .btn-icon .text {
+    @apply hidden md:block;
+  }
+  
+  .container {
+    @apply mx-auto w-[90vw] md:w-[80vw];
+  }
+  
+  .section-container {
+    @apply container flex gap-10 py-10;
+  }
+  
+  .menu-icon {
+    @apply p-3 transition-colors rounded-lg border cursor-pointer text-zinc-200 border-zinc-700 hover:bg-zinc-800;
+  }
+  
+  .mobile-menu {
+    @apply container flex flex-col gap-3 py-5 text-lg;
+  }
