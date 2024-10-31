@@ -20,12 +20,9 @@ const Navbar: React.FC<NavbarProps> = ({
       }`}
     >
       <div className="container h-full flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <img className="rounded-full" src="/images/profile.jpeg" width={40} />
-          <a href="#start" className="text-xl font-medium text-blue-500">
-            Lucca Lazzarini Silva
-          </a>
-        </div>
+        <a href="#start" className="pt-1" style={{fontFamily: "Playwrite BR"}}>
+          Lucca Lazzarini Silva
+        </a>
 
         <div className="hidden gap-3 md:flex">
           <a

@@ -10,6 +10,9 @@ export default function RootLayout({ children }:Readonly<{ children: React.React
 
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+BR:wght@100..400&display=swap'" rel="stylesheet"/>
+      </head>
       <body className="bg-black">
         {children}
       </body>
