@@ -94,11 +94,11 @@ export default function Home() {
           <div className="w-[90vw] md:w-[80vw]  mx-auto flex justify-between">
             <div className="flex flex-col justify-center gap-5 flex-shrink">
               <div className='text-4xl md:text-6xl font-bold'>
-                <div>Hello,</div>
-                <div>I'm <span ref={el} className="bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text"/></div>
+                <div>{"Hello,"}</div>
+                <div>{"I'm "}<span ref={el} className="bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text"/></div>
               </div>
               <div className='text-xs md:text-base font-medium text-zinc-300'>
-                And this is my portfolio website! Please go ahead and explore to find out all the relevant work and projects I've done so far. I hope you'll find some really inspiring creations around here!
+                {"And this is my portfolio website! Please go ahead and explore to find out all the relevant work and projects I've done so far. I hope you'll find some really inspiring creations around here!"}
               </div>
               <div className="flex gap-5">
                 <a href="#projects" className="text-sm md:text-base px-5 py-2 rounded-lg transition-colors bg-zinc-700 hover:bg-zinc-800 text-white">Check out my work</a>
