@@ -8,7 +8,8 @@ html {
 }
 
 section {
-  @apply h-screen scroll-mt-16;
+  height: calc(100vh - 64px);
+  scroll-margin-top: 4rem;
 }
 
 /* Navbar Styles */
@@ -89,7 +90,7 @@ nav:not(.show) {
 }
 
 .section-container {
-  @apply container h-full pb-16 flex gap-10;
+  @apply container h-full flex gap-10;
 }
 
 /* Mobile Menu Styles */
