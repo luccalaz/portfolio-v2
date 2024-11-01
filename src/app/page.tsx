@@ -11,7 +11,7 @@ import Contact from "./components/Contact";
 export default function Page() {
   // State variables
   const [activeSection, setActiveSection] = useState<string>("");
-  const [showNavbar, setShowNavbar] = useState<boolean>(false);
+  const [transparentNavbar, setTransparentNavbar] = useState<boolean>(true);
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
 
   // Refs
@@ -30,8 +30,6 @@ export default function Page() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
-            setShowNavbar(entry.target.id !== "hero");
-            if (showMobileMenu) setShowMobileMenu(entry.target.id !== "hero");
           }
         });
       },
@@ -43,11 +41,9 @@ export default function Page() {
       if (sectionRef.current) observer.observe(sectionRef.current);
     });
 
-    // Disable scrolling when mobile nav menu is shown
-    const html = document.querySelector("html");
-    if (html) {
-      html.style.overflowY = showMobileMenu ? "hidden" : "scroll";
-    }
+    const handleScroll = () => setTransparentNavbar(window.scrollY === 0)
+
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       // Cleanup observer
@@ -55,17 +51,18 @@ export default function Page() {
         if (sectionRef.current) {
           observer.unobserve(sectionRef.current);
         }
+        window.removeEventListener('scroll', handleScroll);
       });
     };
   }, [showMobileMenu, sections]);
 
   return (
     <div className="h-screen bg-black">
-      <Navbar activeSection={activeSection} showNavbar={showNavbar} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu}/>
+      <Navbar activeSection={activeSection} transparentNavbar={transparentNavbar} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu}/>
       <MobileMenu activeSection={activeSection} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu}/>
       <Hero sections={sections} />
       <Projects sections={sections} />
-      <Resume sections={sections} />
+      {/* <Resume sections={sections} /> */}
       <Services sections={sections} />
       <Contact sections={sections} />
     </div>

@@ -30,7 +30,7 @@ nav:not(.show) {
 }
 
 .menu-icon {
-  @apply p-3 rounded-lg border border-zinc-700 text-zinc-200 cursor-pointer md:hover:bg-zinc-800;
+  @apply p-3 rounded-lg border border-zinc-700 text-zinc-400 cursor-pointer md:hover:bg-zinc-800;
 }
 
 /* Navlink Styles */
