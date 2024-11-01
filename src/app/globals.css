@@ -4,11 +4,11 @@
 
 /* Global Styles */
 html {
-  @apply scroll-smooth snap-y snap-mandatory md:snap-none;
+  @apply scroll-smooth;
 }
 
 section {
-  @apply snap-start scroll-mt-16;
+  @apply h-screen scroll-mt-16;
 }
 
 /* Navbar Styles */

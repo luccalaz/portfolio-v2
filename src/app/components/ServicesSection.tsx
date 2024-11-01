@@ -8,7 +8,7 @@ interface ContactSectionProps {
   
   const ContactSection: React.FC<ContactSectionProps> = ({ sections }) => {
     return (
-      <section id="services" className="h-screen bg-zinc-800" ref={sections.services}>
+      <section id="services" className="bg-zinc-800" ref={sections.services}>
         <div className="section-container">
           <Reveal transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2}} className="m-auto text-4xl font-bold text-white">Services</Reveal>
         </div>
