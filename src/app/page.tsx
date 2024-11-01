@@ -2,11 +2,11 @@
 import { useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import MobileMenu from "./components/MobileMenu";
-import StartSection from "./components/StartSection";
-import ProjectsSection from "./components/ProjectsSection";
-import ResumeSection from "./components/ResumeSection";
-import ServicesSection from "./components/ServicesSection";
-import ContactSection from "./components/ContactSection";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Resume from "./components/Resume";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 export default function Page() {
   // State variables
@@ -16,7 +16,7 @@ export default function Page() {
 
   // Refs
   const sections = {
-    start: useRef<HTMLElement>(null),
+    hero: useRef<HTMLElement>(null),
     projects: useRef<HTMLElement>(null),
     resume: useRef<HTMLElement>(null),
     services: useRef<HTMLElement>(null),
@@ -30,8 +30,8 @@ export default function Page() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
-            setShowNavbar(entry.target.id !== "start");
-            if (showMobileMenu) setShowMobileMenu(entry.target.id !== "start");
+            setShowNavbar(entry.target.id !== "hero");
+            if (showMobileMenu) setShowMobileMenu(entry.target.id !== "hero");
           }
         });
       },
@@ -63,11 +63,11 @@ export default function Page() {
     <div className="h-screen bg-black">
       <Navbar activeSection={activeSection} showNavbar={showNavbar} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu}/>
       <MobileMenu activeSection={activeSection} showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu}/>
-      <StartSection sections={sections} />
-      <ProjectsSection sections={sections} />
-      <ResumeSection sections={sections} />
-      <ServicesSection sections={sections} />
-      <ContactSection sections={sections} />
+      <Hero sections={sections} />
+      <Projects sections={sections} />
+      <Resume sections={sections} />
+      <Services sections={sections} />
+      <Contact sections={sections} />
     </div>
   );
 }

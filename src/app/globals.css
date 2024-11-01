@@ -8,8 +8,8 @@ html {
 }
 
 section {
-  height: calc(100vh - 64px);
-  scroll-margin-top: 4rem;
+  min-height: calc(100vh - 4rem);
+  @apply flex items-center scroll-mt-16;
 }
 
 /* Navbar Styles */
@@ -30,7 +30,7 @@ nav:not(.show) {
 }
 
 .menu-icon {
-  @apply p-3 rounded-lg border border-zinc-700 text-zinc-200 transition-colors cursor-pointer md:hover:bg-zinc-800;
+  @apply p-3 rounded-lg border border-zinc-700 text-zinc-200 cursor-pointer md:hover:bg-zinc-800;
 }
 
 /* Navlink Styles */
@@ -87,10 +87,6 @@ nav:not(.show) {
 /* Container Styles */
 .container {
   @apply mx-auto w-[90vw] md:w-[80vw];
-}
-
-.section-container {
-  @apply container h-full flex gap-10;
 }
 
 /* Mobile Menu Styles */

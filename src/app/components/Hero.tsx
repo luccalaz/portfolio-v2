@@ -4,13 +4,13 @@ import Image from 'next/image'
 import Typed from "typed.js";
 import Reveal from "./Reveal";
 
-interface StartSectionProps {
+interface HeroProps {
   sections: {
-    start: React.RefObject<HTMLElement>;
+    hero: React.RefObject<HTMLElement>;
   };
 }
 
-const StartSection: React.FC<StartSectionProps> = ({ sections }) => {
+const Hero: React.FC<HeroProps> = ({ sections }) => {
   const type = useRef(null);
 
   useEffect(() => {
@@ -36,11 +36,10 @@ const StartSection: React.FC<StartSectionProps> = ({ sections }) => {
   }, []);
 
   return (
-    <section id="start" className="h-screen" ref={sections.start}>
-      <div className="flex items-center h-full text-white bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/hero-bg.jpg)` }}>
-        <div className="container flex justify-between">
-          <Reveal className="flex-shrink flex flex-col justify-center gap-5" viewport={{ once: false }} staggerChildren>
-            <div className="text-4xl font-bold md:text-6xl">
+    <section id="hero" className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/hero-bg.jpg)` }} ref={sections.hero}>
+        <div className="container flex">
+          <Reveal className="flex flex-col  justify-center gap-5" viewport={{ once: false }} staggerChildren>
+            <div className="text-4xl font-bold text-white md:text-6xl">
               <div>{"Hello,"}</div>
               <div>
                 {"I'm "}<span ref={type} className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"/>
@@ -63,13 +62,12 @@ const StartSection: React.FC<StartSectionProps> = ({ sections }) => {
               </a>
             </div>
           </Reveal>
-          <Reveal className="w-[800px] hidden xl:block" viewport={{ once: false }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7}} >
-            <Image className="hidden xl:block" src="/images/hero-img.png" width={500} height={500} alt="Illustration of a developer in a cartoonish style."/>
+          <Reveal className="flex-shrink-0 hidden xl:block" viewport={{ once: false }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7}} >
+            <Image src="/images/hero-img.png" width={500} height={500} alt="Illustration of a developer in a cartoonish style."/>
           </Reveal>
-        </div>
       </div>
     </section>
   );
 };
 
-export default StartSection;
+export default Hero;
