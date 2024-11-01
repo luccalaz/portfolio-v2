@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 /* Global Styles */
-* {
-  @apply scroll-smooth;
+html {
+  @apply scroll-smooth snap-y snap-mandatory md:snap-none;
+}
+
+section {
+  @apply snap-center;
 }
 
 /* Navbar Styles */

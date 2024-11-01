@@ -36,10 +36,10 @@ const StartSection: React.FC<StartSectionProps> = ({ sections }) => {
   }, []);
 
   return (
-    <header id="start" className="h-screen" ref={sections.start}>
+    <section id="start" className="h-screen" ref={sections.start}>
       <div className="flex items-center h-full text-white bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/hero-bg.jpg)` }}>
         <div className="container flex justify-between">
-          <Reveal staggerChildren className="flex-shrink flex flex-col justify-center gap-5">
+          <Reveal className="flex-shrink flex flex-col justify-center gap-5" viewport={{ once: false }} staggerChildren>
             <div className="text-4xl font-bold md:text-6xl">
               <div>{"Hello,"}</div>
               <div>
@@ -63,12 +63,12 @@ const StartSection: React.FC<StartSectionProps> = ({ sections }) => {
               </a>
             </div>
           </Reveal>
-          <Reveal className="w-[800px] hidden xl:block" transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7}} >
+          <Reveal className="w-[800px] hidden xl:block" viewport={{ once: false }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7}} >
             <Image className="hidden xl:block" src="/images/hero-img.png" width={500} height={500} alt="Illustration of a developer in a cartoonish style."/>
           </Reveal>
         </div>
       </div>
-    </header>
+    </section>
   );
 };
 
