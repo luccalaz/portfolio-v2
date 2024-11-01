@@ -8,7 +8,7 @@ html {
 }
 
 section {
-  @apply snap-center;
+  @apply snap-start scroll-mt-16;
 }
 
 /* Navbar Styles */
@@ -89,7 +89,7 @@ nav:not(.show) {
 }
 
 .section-container {
-  @apply container flex gap-10 py-10;
+  @apply container h-full pb-16 flex gap-10;
 }
 
 /* Mobile Menu Styles */

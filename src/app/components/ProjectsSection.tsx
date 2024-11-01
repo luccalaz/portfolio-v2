@@ -9,7 +9,7 @@ interface ProjectsSectionProps {
   
   const ProjectsSection: React.FC<ProjectsSectionProps> = ({ sections }) => {
     return (
-      <section id="projects" className="h-screen pt-16 bg-zinc-800" ref={sections.projects}>
+      <section id="projects" className="h-screen bg-zinc-800" ref={sections.projects}>
         <div className="section-container">
           <Reveal transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2}} className="m-auto text-4xl font-bold text-white">Projects</Reveal>
         </div>
