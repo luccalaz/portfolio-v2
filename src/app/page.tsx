@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Navbar from "./components/Navbar";
-import MobileMenu from "./components/MobileMenu";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Resume from "./components/Resume";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
+import Navbar from "../components/Navbar";
+import MobileMenu from "../components/MobileMenu";
+import Hero from "../components/Hero";
+import Projects from "../components/Projects";
+import Resume from "../components/Resume";
+import Services from "../components/Services";
+import Contact from "../components/Contact";
 
 export default function Page() {
   // State variables
@@ -44,6 +44,8 @@ export default function Page() {
     const handleScroll = () => setTransparentNavbar(window.scrollY === 0)
 
     window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
 
     return () => {
       // Cleanup observer
