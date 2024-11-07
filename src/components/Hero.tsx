@@ -16,12 +16,12 @@ const Hero: React.FC<HeroProps> = ({ sections }) => {
   useEffect(() => {
     const typed = new Typed(type.current, {
       strings: [
-        "Lucca Lazzarini Silva",
-        "a web developer",
-        "a quick learner",
-        "passionate",
-        "determined",
-        "adaptive",
+        "Lucca Lazzarini Silva.",
+        "a web developer.",
+        "a quick learner.",
+        "passionate.",
+        "determined.",
+        "adaptive.",
       ],
       typeSpeed: 70,
       backDelay: 2000,

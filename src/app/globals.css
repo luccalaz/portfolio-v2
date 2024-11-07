@@ -4,12 +4,16 @@
 
 /* Global Styles */
 html {
-  @apply scroll-smooth;
+  @apply scroll-smooth selection:bg-yellow-600;
 }
 
 section {
   min-height: calc(100vh - 4rem);
   @apply flex items-center scroll-mt-16;
+}
+
+section#projects {
+  background: radial-gradient(circle at 68.8% 24.1% , rgb(29, 29, 29) 0%, rgb(0, 0, 0) 99.4%);
 }
 
 /* Navbar Styles */
@@ -35,11 +39,11 @@ nav:not(.show) {
 
 /* Navlink Styles */
 .navlink {
-  @apply px-3 py-1 rounded-md transition-colors border border-transparent;
+  @apply px-3 py-1 rounded-md transition-colors border-b border-transparent;
 }
 
 .navlink.active {
-  @apply text-zinc-100 bg-zinc-800 border-zinc-700;
+  @apply text-zinc-100 border-b border-zinc-700;
 }
 
 .navlink:not(.active):hover {
@@ -61,7 +65,7 @@ nav:not(.show) {
 
 /* Button Styles */
 .btn {
-  @apply text-sm md:text-base font-semibold px-5 py-2 rounded-lg transition-colors text-white;
+  @apply text-sm md:text-base font-semibold px-5 py-2 rounded-lg transition-colors text-center text-white;
 }
 
 .btn-primary {
