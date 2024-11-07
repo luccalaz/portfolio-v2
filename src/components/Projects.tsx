@@ -81,7 +81,7 @@ const Projects: React.FC<ProjectsProps> = ({ sections }) => {
                   <h2 className="text-xl font-bold">{project.title}</h2>
                   <p className="mt-2">{project.description}</p>
                   <div className="flex flex-wrap gap-3 my-4">
-                    {project.technologies.map((tech) => <span className="py-1 px-3 bg-zinc-800 rounded-lg">{tech}</span>)}
+                    {project.technologies.map((tech, index) => <span key={index} className="py-1 px-3 bg-zinc-800 rounded-lg">{tech}</span>)}
                   </div>
                 </div>
                 <div className="flex gap-5 mt-2">
