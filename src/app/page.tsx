@@ -33,7 +33,7 @@ export default function Page() {
           }
         });
       },
-      { root: null, rootMargin: "0px", threshold: 0.6 }
+      { root: null, rootMargin: "0px", threshold: 0.2 }
     );
 
     // Observe each section
