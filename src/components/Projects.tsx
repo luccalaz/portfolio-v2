@@ -99,11 +99,11 @@ const Projects: React.FC<ProjectsProps> = ({ sections }) => {
                   <h2 className="text-xl font-bold">{project.title}</h2>
                   <p className="mt-2 text-sm lg:text-base">{project.description}</p>
                   <div className="flex flex-wrap gap-3 my-4">
-                    {project.tags.map((tag, index) => <span key={index} className="py-1 px-3 bg-zinc-800 rounded-lg">{tag}</span>)}
+                    {project.tags.map((tag, i) => <span key={i} className="py-1 px-3 bg-zinc-800 rounded-lg">{tag}</span>)}
                   </div>
                 </div>
                 <div className={`${project.buttons.length > 0 ? "flex" : "hidden"} gap-5 mt-2`}>
-                  {project.buttons.map((btn) => <button onClick={() => window.open(btn.url)} className={`w-full btn btn-${btn.type}`}>{btn.text}</button>)}
+                  {project.buttons.map((btn, i) => <button key={i} onClick={() => window.open(btn.url)} className={`w-full btn btn-${btn.type}`}>{btn.text}</button>)}
                 </div>
               </div>
             </div>
