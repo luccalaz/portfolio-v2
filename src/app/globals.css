@@ -97,3 +97,8 @@ nav:not(.show) {
 .mobile-menu {
   @apply container flex flex-col gap-3 py-5 text;
 }
+
+/* Projects section styles */
+.project-card {
+  @apply overflow-hidden rounded-xl transition-all duration-300 sm:hover:-translate-y-1 active:translate-y-0 hover:cursor-pointer border border-zinc-800 hover:border-zinc-600 bg-zinc-900;
+}

@@ -1,4 +1,6 @@
 import Reveal from "./Reveal";
+import Image from 'next/image';
+import path from 'path';
 
 interface ProjectsProps {
   sections: {
@@ -25,9 +27,9 @@ interface Button {
 let projects: Project[] = [
   {
     id: 1,
-    image: "https://luccalaz.github.io/portfolio/images/portfolio.png",
+    image: "/images/projects/portfolio-site.png",
     title: "Portfolio Website",
-    description: "Made with mostly what I learned in college as well as a few other things I picked up along the way. This website will be constantly updated with my latest projects and relevant work as a Full-Stack Web Developer.",
+    description: "This website! Made with mostly what I learned in college as well as a few other things I picked up along the way. This website will be constantly updated with my latest projects and relevant work as a Full-Stack Web Developer.",
     url: "https://github.com/luccalaz/portfolio",
     tags: ["React", "Next.JS", "TypeScript", "Tailwind CSS", "MongoDB"],
     buttons: [
@@ -36,11 +38,11 @@ let projects: Project[] = [
   },
   {
     id: 2,
-    image: "https://luccalaz.github.io/portfolio/images/weatherApp.png",
+    image: "/images/projects/weather-app.png",
     title: "Weather App",
     description: "This is a weather app I developed using the OpenWeather API and the OpenMeteo API at the end of my first year in college. I tried to make it a clone of the Apple Weather App and in my opinion it looks pretty close.",
     url: "https://weather-app-luccalaz.vercel.app/",
-    tags: ["HTML", "Sass", "JavaScript"],
+    tags: ["HTML", "CSS", "JavaScript"],
     buttons: [
       { type: "primary", text: "Preview", url: "https://weather-app-luccalaz.vercel.app/" },
       { type: "outline", text: "Source code", url: "https://github.com/luccalaz/weather-app" },
@@ -48,11 +50,11 @@ let projects: Project[] = [
   },
   {
     id: 3,
-    image: "/images/project-img.png",
+    image: "/images/projects/documentation-site.png",
     title: "Documentation Website",
     description: "This is a documentation website I made during my second semester in college. It was the first time I built a website using Tailwind. Getting the navigation selection to change depending on which section the user scrolled to was a bit of a challenge. I ended up having to learn how to use IntersectionObserver for the first time.",
     url: "https://luccalaz.github.io/documentation-website-project",
-    tags: ["HTML", "JavaScript", "Tailwind CSS"],
+    tags: ["HTML", "JavaScript", "Tailwind CSS", "Font Awesome"],
     buttons: [
       { type: "primary", text: "Preview", url: "https://luccalaz.github.io/documentation-website-project" },
       { type: "outline", text: "Source code", url: "https://github.com/luccalaz/documentation-website-project" },
@@ -72,13 +74,15 @@ let projects: Project[] = [
 ]
 
 const Projects: React.FC<ProjectsProps> = ({ sections }) => {
+  
+
   return (
     <section id="projects" ref={sections.projects}>
       <div className="container my-16 text-zinc-200">
         <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">Projects</h2>
         <Reveal className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row gap-10" staggerChildren={0.3} delayChildren={0.3}>
           {projects.map((project) => (
-            <div key={project.id} onClick={() => window.open(project.url)} className="group rounded-xl duration-300 sm:hover:-translate-y-1 hover:cursor-pointer border border-zinc-800 hover:border-zinc-600 bg-zinc-900 transition-all active:translate-y-0 overflow-hidden">
+            <div key={project.id} onClick={() => window.open(project.url)} className="project-card group">
               {/* Left Side: Image with Gradient Overlay */}
               <div className="h-2/4 relative overflow-hidden">
                 <img
@@ -97,7 +101,7 @@ const Projects: React.FC<ProjectsProps> = ({ sections }) => {
                   <p className="mt-2 text-sm lg:text-base">{project.description}</p>
                   <div className="flex flex-wrap gap-3 my-4">
                     {project.tags.map((tag, i) => <div key={i} className="py-1 px-3 bg-zinc-800 text-sm rounded-lg flex items-center gap-2">
-                      <img src={`/images/icons/${tag}.svg`} width={13} alt="Tech icon" /> {tag}
+                      <Image src={`/images/icons/${tag}.svg`} width={13} height={13} alt="Tech icon" /> {tag}
                       </div>)}
                   </div>
                 </div>

@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ sections }) => {
   return (
     <section id="hero" className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/hero-bg.jpg)` }} ref={sections.hero}>
         <div className="container flex">
-          <Reveal className="flex flex-col  justify-center gap-5" viewport={{ once: false }} staggerChildren>
+          <Reveal className="xl:basis-4/6 flex flex-col justify-center gap-5" viewport={{ once: false }} staggerChildren>
             <div className="text-4xl font-bold text-white md:text-6xl">
               <div>{"Hello,"}</div>
               <div>
@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ sections }) => {
               </div>
             </div>
             <div className="text-xs font-medium text-zinc-300 md:text-base">
-              {"And I've been coding for 6 years, but in web development I have 2 years of experience. I have a true passion for technology and solving real life problems. I enjoy building cool things that have a potential to help people and I learn along the way."}
+              {"And I've been coding for 6 years, but in web development I have 2 years of experience. I have a true passion for technology and solving real life problems. I enjoy building cool things that have a potential to help people."}
             </div>
             <div className="flex gap-5">
               <a href="#projects" className="btn btn-primary">
@@ -62,8 +62,8 @@ const Hero: React.FC<HeroProps> = ({ sections }) => {
               </a>
             </div>
           </Reveal>
-          <Reveal className="flex-shrink-0 hidden xl:block" viewport={{ once: false }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7}} >
-            <Image src="/images/hero-img.png" width={500} height={500} alt="Illustration of a developer in a cartoonish style."/>
+          <Reveal className="basis-2/6 hidden xl:block" viewport={{ once: false }} transition={{ duration: 0.6, ease: 'easeOut', delay: 0.7}} >
+            <Image className="rounded-2xl" src="/images/hero-img.png" width={500} height={500} alt="Illustration of a developer in a cartoonish style."/>
           </Reveal>
       </div>
     </section>
