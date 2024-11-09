@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ sections }) => {
               </div>
             </div>
             <div className="text-xs font-medium text-zinc-300 md:text-base">
-              {"And this is my portfolio website! Please go ahead and explore to find out all the relevant work and projects I've done so far. I hope you'll find some really inspiring creations around here!"}
+              {"And I've been coding for 6 years, but in web development I have 2 years of experience. I have a true passion for technology and solving real life problems. I enjoy building cool things that have a potential to help people and I learn along the way."}
             </div>
             <div className="flex gap-5">
               <a href="#projects" className="btn btn-primary">
