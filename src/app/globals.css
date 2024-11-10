@@ -4,7 +4,7 @@
 
 /* Global Styles */
 html {
-  @apply scroll-smooth selection:bg-yellow-600;
+  @apply scroll-smooth text-zinc-200 selection:bg-yellow-600;
 }
 
 section {
@@ -12,8 +12,8 @@ section {
   @apply flex items-center scroll-mt-16;
 }
 
-section#projects {
-  background: radial-gradient(circle at 68.8% 24.1% , rgb(29, 29, 29) 0%, rgb(0, 0, 0) 99.4%);
+section .header {
+  @apply w-fit mx-auto mb-12 px-3 py-2 rounded-md text-3xl lg:text-4xl font-bold border-b border-zinc-700
 }
 
 /* Navbar Styles */
@@ -56,7 +56,7 @@ nav:not(.show) {
 }
 
 .m-navlink.active {
-  @apply text-zinc-200 bg-zinc-800;
+  @apply bg-zinc-800;
 }
 
 .m-navlink:not(.active):hover {
@@ -65,7 +65,7 @@ nav:not(.show) {
 
 /* Button Styles */
 .btn {
-  @apply text-sm md:text-base font-semibold px-5 py-2 rounded-lg transition-colors text-center text-white;
+  @apply text-sm md:text-base font-semibold px-5 py-2 rounded-lg transition-colors text-center;
 }
 
 .btn-primary {
@@ -99,6 +99,18 @@ nav:not(.show) {
 }
 
 /* Projects section styles */
+section#projects {
+  background: radial-gradient(circle at 68.8% 24.1% , rgb(29, 29, 29) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+section#services {
+  background: radial-gradient(circle at 68.8% 24.1% , rgb(8, 8, 8) 0%, rgb(24 24 27) 99.4%);
+}
+
+section#contact {
+  background: radial-gradient(circle at 50% 50% , rgb(29, 29, 41) 0%, rgb(0, 0, 0) 99.4%);
+}
+
 .project-card {
-  @apply overflow-hidden rounded-xl transition-all duration-300 sm:hover:-translate-y-1 active:translate-y-0 hover:cursor-pointer border border-zinc-800 hover:border-zinc-600 bg-zinc-900;
+  @apply overflow-hidden rounded-xl transition-all duration-300 sm:hover:-translate-y-1 hover:cursor-pointer border border-zinc-800 hover:border-zinc-600 bg-zinc-900;
 }

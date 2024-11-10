@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({ sections }) => {
     <section id="hero" className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/hero-bg.jpg)` }} ref={sections.hero}>
         <div className="container flex">
           <Reveal className="xl:basis-4/6 flex flex-col justify-center gap-5" viewport={{ once: false }} staggerChildren>
-            <div className="text-4xl font-bold text-white md:text-6xl">
+            <div className="text-4xl font-bold md:text-6xl">
               <div>{"Hello,"}</div>
               <div>
                 {"I'm "}<span ref={type} className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"/>

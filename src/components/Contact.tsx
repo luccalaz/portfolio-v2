@@ -8,9 +8,9 @@ interface ContactProps {
   
   const Contact: React.FC<ContactProps> = ({ sections }) => {
     return (
-      <section id="contact" className="bg-zinc-800" ref={sections.contact}>
-        <div className="container">
-          <Reveal className="m-auto text-4xl font-bold text-white">Contact</Reveal>
+      <section id="contact" ref={sections.contact}>
+        <div className="container my-12">
+          <Reveal className="header">Contact</Reveal>
         </div>
       </section>
     );

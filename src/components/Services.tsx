@@ -8,9 +8,9 @@ interface ServicesProps {
   
   const Services: React.FC<ServicesProps> = ({ sections }) => {
     return (
-      <section id="services" className="bg-zinc-700" ref={sections.services}>
-        <div className="container">
-          <Reveal className="m-auto text-4xl font-bold text-white">Services</Reveal>
+      <section id="services" ref={sections.services}>
+        <div className="container my-12 h-[110vh]">
+          <Reveal className="header">Services</Reveal>
         </div>
       </section>
     );
