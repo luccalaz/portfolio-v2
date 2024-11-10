@@ -44,31 +44,31 @@ let projects: Project[] = [
     url: "https://weather-app-luccalaz.vercel.app/",
     tags: ["HTML", "CSS", "JavaScript"],
     buttons: [
-      { type: "primary", text: "Preview", url: "https://weather-app-luccalaz.vercel.app/" },
+      { type: "primary", text: "View project", url: "https://weather-app-luccalaz.vercel.app/" },
       { type: "outline", text: "Source code", url: "https://github.com/luccalaz/weather-app" },
     ]
   },
   {
     id: 3,
+    image: "/images/projects/woocommerce-site.png",
+    title: "WooCommerce Store",
+    description: "An e-commerce store I set up for a real client using WordPress and the WooCommerce plugin. Even though there was little to no coding involved (other than a few CSS adjustments), it helped me get used to CMS's and WordPress in general.",
+    url: "https://mljc.ca/",
+    tags: ["WordPress", "WooCommerce", "CSS"],
+    buttons: [
+      { type: "primary", text: "View project", url: "https://mljc.ca/" },
+    ]
+  },
+  {
+    id: 4,
     image: "/images/projects/documentation-site.png",
     title: "Documentation Website",
     description: "This is a documentation website I made during my second semester in college. It was the first time I built a website using Tailwind. Getting the navigation selection to change depending on which section the user scrolled to was a bit of a challenge. I ended up having to learn how to use IntersectionObserver for the first time.",
     url: "https://luccalaz.github.io/documentation-website-project",
     tags: ["HTML", "JavaScript", "Tailwind CSS", "Font Awesome"],
     buttons: [
-      { type: "primary", text: "Preview", url: "https://luccalaz.github.io/documentation-website-project" },
+      { type: "primary", text: "View project", url: "https://luccalaz.github.io/documentation-website-project" },
       { type: "outline", text: "Source code", url: "https://github.com/luccalaz/documentation-website-project" },
-    ]
-  },
-  {
-    id: 4,
-    image: "https://luccalaz.github.io/portfolio/images/codeflex-fix.png",
-    title: "Codeflex",
-    description: "Participated and won second place in NSCC's 2023 Codeflex programming competition. This was a hackathon-type event spanning several hours where teams of 2 compete by completing challenges in multiple programming languages and technologies.",
-    url: "https://w0476108.wixsite.com/codeflex/about",
-    tags: ["HTML", "CSS", "Bootstrap", "Python", "MySQL"],
-    buttons: [
-      { type: "primary", text: "Learn more", url: "https://w0476108.wixsite.com/codeflex/about" },
     ]
   },
 ]
@@ -78,23 +78,18 @@ const Projects: React.FC<ProjectsProps> = ({ sections }) => {
 
   return (
     <section id="projects" ref={sections.projects}>
-      <div className="container my-16 text-zinc-200">
-        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">Projects</h2>
+      <div className="container my-12">
+        <Reveal className="header">Projects</Reveal>
         <Reveal className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row gap-10" staggerChildren={0.3} delayChildren={0.3}>
           {projects.map((project) => (
             <div key={project.id} onClick={() => window.open(project.url)} className="project-card group">
-              {/* Left Side: Image with Gradient Overlay */}
-              <div className="h-2/4 relative overflow-hidden">
+              <div className="h-2/4 relative border-b border-b-zinc-800 overflow-hidden">
                 <img
                   src={project.image}
                   alt="Project Image"
                   className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-zinc-900"></div>
               </div>
-
-
-              {/* Right Side: Content */}
               <div className="p-6 text-zinc-300 flex flex-col justify-between">
                 <div>
                   <h2 className="text-xl font-bold">{project.title}</h2>
