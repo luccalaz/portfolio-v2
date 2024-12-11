@@ -3,7 +3,6 @@ import { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
-import Services from "../components/Services";
 import Contact from "../components/Contact";
 
 export default function Page() {
@@ -20,7 +19,6 @@ export default function Page() {
       <Navbar sections={sections}/>
       <Hero sections={sections} />
       <Projects sections={sections} />
-      <Services sections={sections} />
       <Contact sections={sections} />
     </div>
   );

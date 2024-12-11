@@ -108,7 +108,7 @@ section#services {
 }
 
 section#contact {
-  background: radial-gradient(circle at 50% 50% , rgb(29, 29, 41) 0%, rgb(0, 0, 0) 99.4%);
+  background: radial-gradient(circle at 50% 50% , rgb(29, 29, 29)  0%, rgb(0, 0, 0) 99.4%);
 }
 
 .project-card {
