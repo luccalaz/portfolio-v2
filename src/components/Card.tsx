@@ -58,7 +58,7 @@ const Contact: React.FC<CardProps> = ({ project }) => {
                     className="object-cover aspect-[16/9] transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
-            <div className="p-6 text-zinc-300 flex flex-col justify-center">
+            <div className="p-6 text-zinc-300 flex flex-col justify-center flex-grow">
                 <h2 className="text-xl font-bold">{project.title}</h2>
                 <p className="mt-2 text-sm lg:text-base">{project.description}</p>
                 <div className="flex flex-wrap gap-3 my-4">

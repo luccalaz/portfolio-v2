@@ -58,9 +58,10 @@ interface ContactProps {
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
                   <select 
                     id="subject" 
+                    defaultValue={""}
                     className="w-full p-3 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
-                    <option value="" disabled selected>Select a subject</option>
+                    <option value="" disabled>Select a subject</option>
                     <option value="general">General Inquiry</option>
                     <option value="opportunity">Job Opportunity</option>
                     <option value="collaboration">Collaboration</option>

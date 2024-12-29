@@ -6,17 +6,6 @@ export const metadata: Metadata = {
   description: "My beautiful new portfolio version 2.",
 };
 
-// export async function getStaticProps() {
-//   // Fetch projects from MongoDB
-//   const projects = await fetchProjectsFromMongoDB();
-
-//   return {
-//     props: {
-//       projects,
-//     },
-//   };
-// }
-
 export default function RootLayout({ children }:Readonly<{ children: React.ReactNode }>) {
 
   return (
