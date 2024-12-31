@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFileDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from 'next/image'
 import Typed from "typed.js";
 import Reveal from "./Reveal";
@@ -48,8 +48,9 @@ const Hero: React.FC<HeroProps> = ({ sections }) => {
             {"And I've been coding for 6 years, but in web development I have 2 years of experience. I have a true passion for technology and solving real life problems. I enjoy building cool things that have a potential to help people."}
           </div>
           <div className="flex gap-5">
-            <a href="#projects" className="btn btn-primary">
-              Check out my work
+            <a href="documents/Resume.pdf" download="Lucca Lazzarini Silva - Resume.pdf" className="btn btn-primary flex items-center gap-2">
+              <FaFileDownload className="icon"/>
+              Download Resume
             </a>
             <a href="https://linkedin.com/in/luccalaz" target="_blank" className="btn btn-outline btn-icon">
               <FaLinkedin className="icon"/>
