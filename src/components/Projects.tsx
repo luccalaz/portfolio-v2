@@ -1,27 +1,9 @@
+import { Project, Sections } from "@/tools/data.model";
 import Card from "./Card";
 import Reveal from "./Reveal";
 
 interface ProjectsProps {
-  sections: {
-    projects: React.RefObject<HTMLElement>;
-  };
-}
-
-interface Project {
-  id: number,
-  image: string,
-  title: string
-  description: string,
-  url: string,
-  isFeatured: boolean;
-  tags: string[],
-  buttons: Button[]
-}
-
-interface Button {
-  type: string,
-  text: string,
-  url: string
+  sections: Sections
 }
 
 let projects: Project[] = [

@@ -1,10 +1,9 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import Reveal from "./Reveal";
+import { Sections } from "@/tools/data.model";
 
 interface ContactProps {
-    sections: {
-      contact: React.RefObject<HTMLElement>;
-    };
+    sections: Sections
   }
   
   const Contact: React.FC<ContactProps> = ({ sections }) => {

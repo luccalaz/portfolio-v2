@@ -1,66 +1,46 @@
+import useActiveSection from "@/hooks/useActiveSection";
+import { Sections } from "@/tools/data.model";
 import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 
 interface NavbarProps {
-  sections: {
-    hero: React.RefObject<HTMLElement>;
-    projects: React.RefObject<HTMLElement>;
-    services: React.RefObject<HTMLElement>;
-    contact: React.RefObject<HTMLElement>;
-  };
+  sections: Sections
 }
 
 const Navbar: React.FC<NavbarProps> = ({ sections }) => {
   // State variables
-  const [activeSection, setActiveSection] = useState<string>("");
   const [transparentNavbar, setTransparentNavbar] = useState<boolean>(true);
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
+  const activeSection = useActiveSection(Object.values(sections));
 
   useEffect(() => {
-    // Active navbar scrolling feature
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { root: null, rootMargin: "0px", threshold: 0.2 }
-    );
+    const handleScroll = () => {
+      // Check if the scroll position is at the very top
+      setTransparentNavbar(window.scrollY === 0);
+    };
 
-    // Observe each section
-    Object.values(sections).forEach((sectionRef) => {
-      if (sectionRef.current) observer.observe(sectionRef.current);
-    });
-
-    const handleScroll = () => setTransparentNavbar(window.scrollY === 0)
-
+    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
 
+    // Call handleScroll initially to set the correct state on load
     handleScroll();
 
+    // Cleanup the event listener on component unmount
     return () => {
-      // Cleanup observer
-      Object.values(sections).forEach((sectionRef) => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
-        }
-      });
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [showMobileMenu, sections]);
+  }, []);
 
   return (
     <div>
-      <nav className={`fixed top-0 z-50 w-full h-16 border-b border-b-zinc-800 bg-zinc-900 ${!transparentNavbar && "show"}`}></nav>
+      <nav className={`fixed top-0 z-50 w-full h-16 border-b border-b-zinc-800 bg-zinc-900/70 backdrop-blur-xl ${!transparentNavbar && "show"}`}></nav>
       <nav className={`fixed top-16 z-50 w-full h-16 text-zinc-400`}>
         <div className="container h-full flex items-center justify-between">
           <a href="#hero" className="pt-1" style={{ fontFamily: "Playwrite BR" }} onClick={() => setShowMobileMenu(false)}>Lucca Lazzarini Silva</a>
 
           <div className="hidden gap-3 md:flex">
-            <a href="#projects" className={`navlink ${activeSection === "projects" && "active"}`}>Projects</a>
-            <a href="#contact" className={`navlink ${activeSection === "contact" && "active"}`}>Contact</a>
+            <a href="#projects" className={`navlink ${activeSection == 'projects' && 'active'}`}>Projects</a>
+            <a href="#contact" className={`navlink ${activeSection == 'contact' && 'active'}`}>Contact</a>
           </div>
 
           <div className="menu-icon md:hidden" onClick={() => setShowMobileMenu(!showMobileMenu)}>
@@ -70,8 +50,8 @@ const Navbar: React.FC<NavbarProps> = ({ sections }) => {
       </nav>
       <nav className={`fixed z-40 w-screen h-screen pt-16 bg-zinc-900 text-zinc-400 ${showMobileMenu && "show"}`}>
         <div className="mobile-menu">
-          <a href="#projects" className={`m-navlink ${activeSection === "projects" && "active"}`} onClick={() => setShowMobileMenu(!showMobileMenu)}> Projects</a>
-          <a href="#contact" className={`m-navlink ${activeSection === "contact" && "active"}`} onClick={() => setShowMobileMenu(!showMobileMenu)}>Contact</a>
+          <a href="#projects" className={`m-navlink ${activeSection == 'projects' && 'active'}`} onClick={() => setShowMobileMenu(!showMobileMenu)}> Projects</a>
+          <a href="#contact" className={`m-navlink ${activeSection == 'contact' && 'active'}`} onClick={() => setShowMobileMenu(!showMobileMenu)}>Contact</a>
         </div>
       </nav>
     </div>
