@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Playwrite BR';
+  src: url('/fonts/PlaywriteBR.ttf') format('truetype'); /* Update the path as necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Global Styles */
 html {
   @apply scroll-smooth text-zinc-200 selection:bg-gray-800;
