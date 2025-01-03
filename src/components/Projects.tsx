@@ -1,6 +1,6 @@
 import { Project, Sections } from "@/tools/data.model";
 import Card from "./Card";
-import Reveal from "./Reveal";
+import { motion } from "framer-motion";
 
 interface ProjectsProps {
   sections: Sections
@@ -51,7 +51,7 @@ let projects: Project[] = [
     title: "WooCommerce Store",
     description: "An e-commerce store I set up for a real client using WordPress and the WooCommerce plugin. Even though there was almost no coding involved (other than a few CSS adjustments), it helped me get used to CMS's and WordPress in general.",
     url: "https://mljc.ca/",
-    isFeatured: false,
+    isFeatured: true,
     tags: ["WordPress", "WooCommerce", "CSS"],
     buttons: [
       { type: "primary", text: "Preview", url: "https://mljc.ca/" },
@@ -65,12 +65,11 @@ const Projects: React.FC<ProjectsProps> = ({ sections }) => {
   return (
     <section id="projects" ref={sections.projects}>
       <div className="container my-12">
-        <Reveal className="header">Projects</Reveal>
-        <Reveal className="grid grid-cols-1 lg:grid-cols-2 grid-flow-row gap-10">
-          {projects.map((project) => (
-            <Card key={project.id} project={project}/>
+        <div className="mt-12 grid grid-cols-1 xl:grid-cols-2 grid-flow-row gap-10">
+          {projects.map((project, index) => (
+              <Card key={index} project={project} index={index} />
           ))}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

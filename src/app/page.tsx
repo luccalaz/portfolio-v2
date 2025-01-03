@@ -15,11 +15,13 @@ export default function Page() {
   };
 
   return (
-    <div className="h-screen bg-black">
+    <div className="h-screen">
       <Navbar sections={sections}/>
       <Hero sections={sections} />
-      <Projects sections={sections} />
-      <Contact sections={sections} />
+      <div className="background">
+        <Projects sections={sections}/>
+        <Contact sections={sections} />
+      </div>
     </div>
   );
 }

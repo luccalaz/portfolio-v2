@@ -1,33 +1,23 @@
-import Reveal from "./Reveal";
+import { Project } from "@/tools/data.model";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
-interface Button {
-    type: string,
-    text: string,
-    url: string
-}
-
-interface CardProps {
-    project: {
-        id: number,
-        image: string,
-        title: string
-        description: string,
-        url: string,
-        isFeatured: boolean;
-        tags: string[],
-        buttons: Button[]
-    };
-}
-
-const Contact: React.FC<CardProps> = ({ project }) => {
+const Card = ({ project, index } : { project: Project, index: number }) => {
     if (project.isFeatured) return (
-        <div key={project.id} onClick={() => window.open(project.url)} className="project-card group 2xl:flex 2xl:col-span-2">
+        <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }} 
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+            key={project.id} 
+            onClick={() => window.open(project.url)} 
+            className="project-card group 2xl:flex 2xl:col-span-2"
+        >
             <div className="2xl:w-2/4 border-r border-b-0 border-zinc-800 overflow-hidden">
                 <Image
                     src={project.image}
                     alt="Project Image"
-                    width={800}
+                    width={1200}
                     height={300}
                     className="object-cover aspect-[16/9] transition-transform duration-300 group-hover:scale-105"
                 />
@@ -44,16 +34,24 @@ const Contact: React.FC<CardProps> = ({ project }) => {
                     {project.buttons.map((btn, i) => <button key={i} onClick={() => window.open(btn.url)} className={`2xl:w-fit w-full btn btn-${btn.type}`}>{btn.text}</button>)}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 
     return (
-        <div key={project.id} onClick={() => window.open(project.url)} className="project-card group">
+        <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }} 
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+            key={project.id} 
+            onClick={() => window.open(project.url)} 
+            className="project-card group"
+        >
             <div className="border-b border-zinc-800 overflow-hidden">
                 <Image
                     src={project.image}
                     alt="Project Image"
-                    width={800}
+                    width={1200}
                     height={300}
                     className="object-cover aspect-[16/9] transition-transform duration-300 group-hover:scale-105"
                 />
@@ -70,8 +68,8 @@ const Contact: React.FC<CardProps> = ({ project }) => {
                     {project.buttons.map((btn, i) => <button key={i} onClick={() => window.open(btn.url)} className={`w-full btn btn-${btn.type}`}>{btn.text}</button>)}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
-export default Contact;
+export default Card;
