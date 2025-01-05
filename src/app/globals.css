@@ -15,7 +15,6 @@ html {
 }
 
 section {
-  min-height: calc(100vh - 4rem);
   @apply flex items-center scroll-mt-16;
 }
 

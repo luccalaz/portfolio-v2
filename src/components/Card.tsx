@@ -8,7 +8,7 @@ const Card = ({ project, index } : { project: Project, index: number }) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }} 
-            transition={{ duration: 0.8, delay: index * 0.2 }}
+            transition={{ duration: 0.8, delay: index * 0.4 }}
             key={project.id} 
             onClick={() => window.open(project.url)} 
             className="project-card group 2xl:flex 2xl:col-span-2"
@@ -42,7 +42,7 @@ const Card = ({ project, index } : { project: Project, index: number }) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }} 
-            transition={{ duration: 0.8, delay: index * 0.2 }}
+            transition={{ duration: 0.8, delay: index * 0.4 }}
             key={project.id} 
             onClick={() => window.open(project.url)} 
             className="project-card group"

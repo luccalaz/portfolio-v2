@@ -4,13 +4,13 @@ import { Sections } from "@/tools/data.model";
 const Contact = ({ sections } : { sections: Sections }) => {
   return (
     <section id="contact" ref={sections.contact}>
-      <div className="container my-12">
+      <div className="container my-12 mb-24">
         {/* <h2 className="header">Contact</h2> */}
-        <div className="flex flex-col lg:flex-row lg:space-x-8">
-          <div className="flex-1 p-8 flex flex-col gap-6">
-            <h2 className="text-4xl font-semibold mb-4 border-t-8 border-blue-700 pt-5">Get in touch with me, and let’s chat</h2>
+        <div className="p-2 flex flex-col lg:flex-row lg:space-x-24">
+          <div className="flex-1 flex flex-col gap-6">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 border-t-8 border-blue-700 pt-5">Get in touch with me, and let’s chat</h2>
             <p className="text-gray-300 mb-8">
-              I’d love to talk more about my skills and how I can be useful to you and your team!
+              I’d love to talk more about my skills and how I can be useful to you or your team!
             </p>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center space-x-2">
@@ -28,14 +28,14 @@ const Contact = ({ sections } : { sections: Sections }) => {
             </div>
           </div>
           
-          <div className="flex-1 bg-zinc-900 rounded-lg p-10 mt-8 lg:mt-0">
+          <div className="flex-1 rounded-lg mt-12 lg:mt-0">
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                 <input 
                   type="text" 
                   id="name" 
-                  className="w-full p-3 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                  className="w-full p-2 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" 
                   placeholder="Your name" 
                 />
               </div>
@@ -44,7 +44,7 @@ const Contact = ({ sections } : { sections: Sections }) => {
                 <input 
                   type="email" 
                   id="email" 
-                  className="w-full p-3 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                  className="w-full p-2 rounded bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-blue-500" 
                   placeholder="Your email" 
                 />
               </div>
@@ -53,7 +53,7 @@ const Contact = ({ sections } : { sections: Sections }) => {
                 <select 
                   id="subject" 
                   defaultValue={""}
-                  className="w-full p-3 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 rounded bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="" disabled>Select a subject</option>
                   <option value="general">General Inquiry</option>
@@ -65,13 +65,14 @@ const Contact = ({ sections } : { sections: Sections }) => {
                 <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
                 <textarea 
                   id="message" 
-                  className="w-full p-3 h-32 rounded bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                  className="w-full p-2 h-32 rounded bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-blue-500" 
                   placeholder="Your message"
+                  style={{resize: "none"}}
                 />
               </div>
               <button 
                 type="submit" 
-                className="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded text-white font-semibold transition"
+                className="py-2 px-5 bg-blue-600 hover:bg-blue-700 rounded font-semibold transition"
               >
                 Send message
               </button>

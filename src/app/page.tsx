@@ -16,7 +16,7 @@ export default function Page() {
 
   return (
     <div className="h-screen">
-      <Navbar sections={sections}/>
+      <Navbar sections={Object.values(sections)}/>
       <Hero sections={sections} />
       <div className="background">
         <Projects sections={sections}/>

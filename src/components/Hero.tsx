@@ -14,9 +14,10 @@ const Hero = ({ sections } : { sections: Sections }) => {
         "Lucca Lazzarini Silva.",
         "a web developer.",
         "a quick learner.",
+        "a problem solver.",
         "passionate.",
+        "adaptable.",
         "determined.",
-        "adaptive.",
       ],
       typeSpeed: 70,
       backDelay: 2000,
@@ -59,7 +60,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
             }}
             className="text-xs font-medium text-zinc-300 md:text-base"
           >
-            {"And I've been coding for 6 years, but in web development I have 2 years of experience. I have a true passion for technology and solving real life problems. I enjoy building cool things that have a potential to help people."}
+            {"And I have 6 years of coding experience and 2 years specializing in web development. I’m passionate about using technology to solve real-world problems and creating modern, user-friendly applications."}
           </motion.div>
           <motion.div
             variants={{
