@@ -15,7 +15,7 @@ html {
 }
 
 section {
-  @apply flex items-center scroll-mt-16;
+  @apply flex items-center scroll-mt-14;
 }
 
 section .header {

@@ -94,7 +94,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
         </motion.div>
       </div>
       <motion.a
-        initial={{ opacity: 0, scale: 2 }}
+        initial={{ opacity: 0, scale: 1.7 }}
         animate={{ opacity: 1, y: [0, -10, 0] }}
         transition={{ 
           opacity: { duration: 0.5, delay: 5 },
