@@ -78,7 +78,7 @@ const Contact = ({ sections }: { sections: Sections }) => {
       <div className="container my-12 mb-24">
         <div className="p-2 flex flex-col lg:flex-row lg:space-x-24">
           <div className="flex-1 flex flex-col gap-6">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4 border-t-8 border-blue-700 pt-5">
+            <h2 className="text-3xl font-semibold mb-4 border-t-8 border-blue-700 pt-5">
               Get in touch with me, and let’s chat
             </h2>
             <p className="text-gray-300 mb-8">

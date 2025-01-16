@@ -30,14 +30,15 @@ const Navbar = ({ sections } : { sections: RefObject<HTMLElement>[] }) => {
   return (
     <div>
       <nav 
-        className={`fixed top-0 z-50 w-full h-16 border-b border-b-zinc-800 bg-zinc-900/70 backdrop-blur-xl ${!transparentNavbar && "show"}`}></nav>
+        className={`fixed top-0 z-50 w-full h-14 border-b border-b-zinc-800 bg-zinc-900/70 backdrop-blur-xl ${!transparentNavbar && "show"}`}></nav>
+
       <motion.nav 
         initial={{ y: -128 }}
         animate={{ y: -64 }}
-        className={`fixed top-16 z-50 w-full h-16 text-zinc-400`}
+        className={`fixed top-16 z-50 w-full h-14 text-zinc-400`}
       >
         <div className="container h-full flex items-center justify-between">
-          <a href="/#hero" className="pt-1 text-sm md:text-base" style={{ fontFamily: "Playwrite BR" }} onClick={() => setShowMobileMenu(false)}>Lucca Lazzarini Silva</a>
+          <a href="/#hero" className="pt-1 text-sm" style={{ fontFamily: "Playwrite BR" }} onClick={() => setShowMobileMenu(false)}>Lucca Lazzarini Silva</a>
 
           <div className="hidden gap-3 md:flex">
             <a href="/#projects" className={`navlink ${activeSection == 'projects' && 'active'}`}>Projects</a>

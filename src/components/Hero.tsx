@@ -46,7 +46,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
             }}
-            className="text-4xl font-bold md:text-6xl"
+            className="text-4xl font-bold md:text-5xl"
           >
             <div>{"Hello,"}</div>
             <div>
@@ -58,7 +58,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
             }}
-            className="text-sm font-medium text-zinc-300 md:text-lg"
+            className="text-sm font-medium text-zinc-300 md:text-base"
           >
             {"And I have 6 years of coding experience and 2 years specializing in web development. I’m passionate about using technology to solve real-world problems and creating modern, user-friendly applications."}
           </motion.div>
@@ -94,7 +94,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
         </motion.div>
       </div>
       <motion.a
-        initial={{ opacity: 0, scale: 2 }}
+        initial={{ opacity: 0, scale: 1.7 }}
         animate={{ opacity: 1, y: [0, -10, 0] }}
         transition={{ 
           opacity: { duration: 0.5, delay: 5 },
