@@ -59,7 +59,7 @@ const Card = ({ project, index }: { project: Project, index: number }) => {
             </div>
             <div className="p-6 text-zinc-300 flex flex-col justify-start flex-grow">
                 <h2 className="text-lg font-bold">{project.title}</h2>
-                <p className="mt-2 text-xs lg:text-sm   ">{project.description}</p>
+                <p className="mt-2 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-3 my-4">
                     {project.tags.map((tag, i) => <div key={i} className="py-1 px-3 bg-zinc-800 text-xs rounded-lg flex items-center gap-2">
                         <Image src={`/images/icons/${tag}.svg`} width={13} height={13} alt="Tech icon" /> {tag}
