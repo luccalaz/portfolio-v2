@@ -51,12 +51,12 @@ nav:not(.show) {
 }
 
 .menu-icon {
-  @apply p-3 rounded-lg border border-zinc-700 text-zinc-400 cursor-pointer md:hover:bg-zinc-800;
+  @apply p-2 rounded-lg border border-zinc-700 text-zinc-400 cursor-pointer md:hover:bg-zinc-800;
 }
 
 /* Navlink Styles */
 .navlink {
-  @apply px-3 py-1 rounded-md transition-colors border-b border-transparent;
+  @apply px-3 py-1 text-sm rounded-md transition-colors border-b border-transparent;
 }
 
 .navlink.active {
@@ -69,7 +69,7 @@ nav:not(.show) {
 
 /* Mobile Navlink Styles */
 .m-navlink {
-  @apply px-5 py-2 rounded-md transition-colors;
+  @apply px-5 py-2 text-sm rounded-md transition-colors;
 }
 
 .m-navlink.active {
@@ -82,7 +82,7 @@ nav:not(.show) {
 
 /* Button Styles */
 .btn {
-  @apply text-sm md:text-base font-semibold px-5 py-2 rounded-lg transition-colors text-center;
+  @apply text-sm font-semibold px-5 py-2 rounded-lg transition-colors text-center;
 }
 
 .btn-primary {
@@ -112,7 +112,7 @@ nav:not(.show) {
 
 /* Mobile Menu Styles */
 .mobile-menu {
-  @apply container flex flex-col gap-3 py-5 text;
+  @apply container flex flex-col gap-3 py-4 text;
 }
 
 /* Projects section styles */

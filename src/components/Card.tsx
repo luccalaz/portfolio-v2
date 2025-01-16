@@ -24,10 +24,10 @@ const Card = ({ project, index }: { project: Project, index: number }) => {
                 />
             </div>
             <div className="2xl:w-2/4 2xl:px-10 p-6 text-zinc-300 flex flex-col justify-start 2xl:justify-center flex-grow">
-                <h2 className="2xl:text-2xl text-xl font-bold">{project.title}</h2>
-                <p className="mt-2 text-sm lg:text-base">{project.description}</p>
+                <h2 className="text-xl font-bold">{project.title}</h2>
+                <p className="mt-2 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-3 my-4">
-                    {project.tags.map((tag, i) => <div key={i} className="py-1 px-3 bg-zinc-800 text-sm rounded-lg flex items-center gap-2">
+                    {project.tags.map((tag, i) => <div key={i} className="py-1 px-3 bg-zinc-800 text-xs rounded-lg flex items-center gap-2">
                         <Image src={`/images/icons/${tag}.svg`} width={13} height={13} alt="Tech icon" /> {tag}
                     </div>)}
                 </div>
@@ -58,10 +58,10 @@ const Card = ({ project, index }: { project: Project, index: number }) => {
                 />
             </div>
             <div className="p-6 text-zinc-300 flex flex-col justify-start flex-grow">
-                <h2 className="text-xl font-bold">{project.title}</h2>
-                <p className="mt-2 text-sm lg:text-base">{project.description}</p>
+                <h2 className="text-lg font-bold">{project.title}</h2>
+                <p className="mt-2 text-xs lg:text-sm   ">{project.description}</p>
                 <div className="flex flex-wrap gap-3 my-4">
-                    {project.tags.map((tag, i) => <div key={i} className="py-1 px-3 bg-zinc-800 text-sm rounded-lg flex items-center gap-2">
+                    {project.tags.map((tag, i) => <div key={i} className="py-1 px-3 bg-zinc-800 text-xs rounded-lg flex items-center gap-2">
                         <Image src={`/images/icons/${tag}.svg`} width={13} height={13} alt="Tech icon" /> {tag}
                     </div>)}
                 </div>
