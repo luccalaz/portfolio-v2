@@ -11,7 +11,7 @@
 
 /* Global Styles */
 html {
-  @apply scroll-smooth text-zinc-200 selection:bg-gray-800;
+  @apply scroll-smooth text-zinc-200 selection:bg-gray-800 bg-black;
 }
 
 section {
