@@ -28,11 +28,11 @@
         "image": "/images/projects/launch-pad.png",
         "title": "Launch Pad",
         "description": "A launch pad app made with ASP.NET Core using EF Core. A web app that features authentication and some dashboard customization options, including the ability to pin links, edit categories and light/dark mode.",
-        "url": "https://github.com/luccalaz/portfolio",
+        "url": "https://github.com/luccalaz/launch-pad",
         "isFeatured": false,
         "tags": ["ASP.NET Core", "Bootstrap", "MySQL", "Tailwind CSS"],
         "buttons": [
-            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio" }
+            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/launch-pad" }
         ]
     },
     {
@@ -40,11 +40,11 @@
         "image": "/images/projects/weather-app.png",
         "title": "Weather App",
         "description": "This is a weather app I developed using the OpenWeather API and the OpenMeteo API at the end of my first year in college using vanilla HTML/CSS/JS. I tried to make it a clone of the Apple Weather App and in my opinion it looks pretty close.",
-        "url": "https://weather-app-luccalaz.vercel.app/",
+        "url": "https://weatherapp.luccalaz.com/",
         "isFeatured": false,
         "tags": ["HTML", "CSS", "JavaScript"],
         "buttons": [
-            { "type": "primary", "text": "Preview", "url": "https://weather-app-luccalaz.vercel.app/" },
+            { "type": "primary", "text": "Preview", "url": "https://weatherapp.luccalaz.com/" },
             { "type": "outline", "text": "Source code", "url": "https://github.com/luccalaz/weather-app" }
         ]
     },
