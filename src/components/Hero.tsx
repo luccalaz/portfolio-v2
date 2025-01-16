@@ -58,7 +58,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
             }}
-            className="text-xs font-medium text-zinc-300 md:text-base"
+            className="text-xs font-medium text-zinc-300 md:text-lg"
           >
             {"And I have 6 years of coding experience and 2 years specializing in web development. I’m passionate about using technology to solve real-world problems and creating modern, user-friendly applications."}
           </motion.div>
