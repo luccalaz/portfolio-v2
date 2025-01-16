@@ -46,7 +46,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
             }}
-            className="text-3xl font-bold md:text-6xl"
+            className="text-4xl font-bold md:text-6xl"
           >
             <div>{"Hello,"}</div>
             <div>
@@ -58,7 +58,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
             }}
-            className="text-xs font-medium text-zinc-300 md:text-lg"
+            className="text-sm font-medium text-zinc-300 md:text-lg"
           >
             {"And I have 6 years of coding experience and 2 years specializing in web development. I’m passionate about using technology to solve real-world problems and creating modern, user-friendly applications."}
           </motion.div>
@@ -69,7 +69,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
             }}
             className="flex gap-5"
           >
-            <a href="documents/Resume.pdf" download="Lucca Lazzarini Silva - Resume.pdf" className="btn btn-primary flex items-center gap-2">
+            <a href="https://docs.google.com/document/d/1mT5JC2_4RWntQLAW0uBKCckIRguQl9xBw_vZT5al9GM/export?format=pdf" className="btn btn-primary flex items-center gap-2">
               <FaFileDownload className="icon"/>
               Download Resume
             </a>
