@@ -19,6 +19,7 @@ const Card = ({ project, index }: { project: Project, index: number }) => {
                     alt="Project Image"
                     width={1200}
                     height={300}
+                    priority
                     className="object-cover aspect-[16/9] transition-transform duration-300 group-hover:scale-105"
                 />
             </div>

@@ -4,11 +4,11 @@
         "image": "/images/projects/portfolio-site.png",
         "title": "Portfolio Website",
         "description": "This website! Made with mostly what I learned in college as well as a few other things I picked up along the way. This website will be constantly updated with my latest projects and relevant work as a Full-Stack Web Developer.",
-        "url": "https://github.com/luccalaz/portfolio",
+        "url": "https://github.com/luccalaz/portfolio-v2",
         "isFeatured": true,
         "tags": ["React", "Next.JS", "TypeScript", "Tailwind CSS"],
         "buttons": [
-            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio" }
+            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio-v2" }
         ]
     },
     {
@@ -16,11 +16,11 @@
         "image": "/images/projects/tech-roster-admin.png",
         "title": "Tech Roster Admin",
         "description": "An administration end that allows users to edit the content of the Tech Roster frontend. Made with React and Next.JS using a MongoDB database and the Shadcn UI library. Uses a custom REST API for data handling between the app and database.",
-        "url": "https://github.com/luccalaz/portfolio",
+        "url": "https://github.com/luccalaz/tech-roster-admin",
         "isFeatured": false,
         "tags": ["React", "Next.JS", "TypeScript", "MongoDB", "Tailwind CSS"],
         "buttons": [
-            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio" }
+            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/tech-roster-admin" }
         ]
     },
     {
@@ -30,7 +30,7 @@
         "description": "A launch pad app made with ASP.NET Core using EF Core. A web app that features authentication and some dashboard customization options, including the ability to pin links, edit categories and light/dark mode.",
         "url": "https://github.com/luccalaz/portfolio",
         "isFeatured": false,
-        "tags": ["ASP.Net Core", "Bootstrap", "MySQL", "Tailwind CSS"],
+        "tags": ["ASP.NET Core", "Bootstrap", "MySQL", "Tailwind CSS"],
         "buttons": [
             { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio" }
         ]
