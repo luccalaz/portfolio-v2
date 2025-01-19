@@ -35,6 +35,7 @@ const Navbar = ({ sections } : { sections: RefObject<HTMLElement>[] }) => {
       <motion.nav 
         initial={{ y: -128 }}
         animate={{ y: -64 }}
+        transition={{ delay: 1 }}
         className={`fixed top-16 z-50 w-full h-14 text-zinc-400`}
       >
         <div className="container h-full flex items-center justify-between">

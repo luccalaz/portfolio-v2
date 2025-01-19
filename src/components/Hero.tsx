@@ -38,56 +38,56 @@ const Hero = ({ sections } : { sections: Sections }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }} 
-          transition={{ staggerChildren: 0.3 }} 
+          transition={{ staggerChildren: 0.3, delayChildren: 0.5 }} 
           className="xl:basis-4/6 flex flex-col justify-center gap-5"
         >
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
-            }}
-            className="text-4xl font-bold md:text-5xl"
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
+        }}
+        className="text-4xl font-bold md:text-5xl"
           >
-            <div>{"Hello,"}</div>
-            <div>
-              {"I'm "}<span ref={type} className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"/>
-            </div>
+        <div>{"Hello,"}</div>
+        <div>
+          {"I'm "}<span ref={type} className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"/>
+        </div>
           </motion.div>
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
-            }}
-            className="text-sm font-medium text-zinc-300 md:text-base"
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
+        }}
+        className="text-sm font-medium text-zinc-300 md:text-base"
           >
-            {"And I have 6 years of coding experience and 2 years specializing in web development. I’m passionate about using technology to solve real-world problems and creating modern, user-friendly applications."}
+        {"And I have 6 years of coding experience and 2 years specializing in web development. I’m passionate about using technology to solve real-world problems and creating modern, user-friendly applications."}
           </motion.div>
           <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 50 }, 
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
-            }}
-            className="flex gap-5"
+        variants={{
+          hidden: { opacity: 0, y: 50 }, 
+          visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
+        }}
+        className="flex gap-5"
           >
-            <a href="https://docs.google.com/document/d/1mT5JC2_4RWntQLAW0uBKCckIRguQl9xBw_vZT5al9GM/export?format=pdf" className="btn btn-primary flex items-center gap-2">
-              <FaFileDownload className="icon"/>
-              Download Resume
-            </a>
-            <a href="https://linkedin.com/in/luccalaz" target="_blank" className="btn btn-outline btn-icon">
-              <FaLinkedin className="icon"/>
-              <span className="text">LinkedIn</span>
-            </a>
-            <a href="https://github.com/luccalaz" target="_blank" className="btn btn-outline btn-icon">
-              <FaGithub className="icon"/>
-              <span className="text">GitHub</span>
-            </a>
+        <a href="https://docs.google.com/document/d/1mT5JC2_4RWntQLAW0uBKCckIRguQl9xBw_vZT5al9GM/export?format=pdf" className="btn btn-primary flex items-center gap-2">
+          <FaFileDownload className="icon"/>
+          Download Resume
+        </a>
+        <a href="https://linkedin.com/in/luccalaz" target="_blank" className="btn btn-outline btn-icon">
+          <FaLinkedin className="icon"/>
+          <span className="text">LinkedIn</span>
+        </a>
+        <a href="https://github.com/luccalaz" target="_blank" className="btn btn-outline btn-icon">
+          <FaGithub className="icon"/>
+          <span className="text">GitHub</span>
+        </a>
           </motion.div>
         </motion.div>
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 1, duration: 0.6 }}
           className="basis-2/6 hidden xl:block"
         >
           <Image className="rounded-2xl" src="/images/hero-img.webp" width={500} height={500} priority alt="Illustration of a developer in a cartoonish style."/>
