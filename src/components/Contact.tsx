@@ -30,6 +30,7 @@ const Contact = ({ sections }: { sections: Sections }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrors({});
 
     // Validate the form
     const validationErrors = validateForm();
@@ -44,7 +45,7 @@ const Contact = ({ sections }: { sections: Sections }) => {
       return;
     }
 
-    setStatus('Sending...');
+    setStatus('pending');
 
     try {
       const response = await fetch('/api/mailgun', {
@@ -110,6 +111,7 @@ const Contact = ({ sections }: { sections: Sections }) => {
                   id="name"
                   className={`w-full p-2 rounded bg-neutral-800 text-white ${errors.name ? 'border border-red-500' : 'focus:ring-blue-900'}`}
                   placeholder="Your name"
+                  disabled={status === 'pending'}
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -125,6 +127,7 @@ const Contact = ({ sections }: { sections: Sections }) => {
                   id="email"
                   className={`w-full p-2 rounded bg-neutral-800 ${errors.email ? 'border border-red-500' : 'focus:ring-blue-500'}`}
                   placeholder="Your email"
+                  disabled={status === 'pending'}
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -139,6 +142,7 @@ const Contact = ({ sections }: { sections: Sections }) => {
                   id="subject"
                   value={formData.subject}
                   className={`w-full p-2 rounded bg-neutral-800 ${errors.subject ? 'border border-red-500' : 'focus:ring-blue-500'}`}
+                  disabled={status === 'pending'}
                   onChange={handleChange}
                   required
                 >
@@ -158,6 +162,7 @@ const Contact = ({ sections }: { sections: Sections }) => {
                   className={`w-full p-2 h-32 rounded bg-neutral-800 ${errors.message ? 'border border-red-500' : 'focus:ring-blue-500'}`}
                   placeholder="Your message"
                   style={{ resize: "none" }}
+                  disabled={status === 'pending'}
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -167,23 +172,27 @@ const Contact = ({ sections }: { sections: Sections }) => {
 
               {/* reCAPTCHA widget */}
               <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "0"}
                 onChange={handleCaptchaChange}
               />
-              {errors.captcha && <p className="text-red-500 text-sm">{errors.captcha}</p>}
 
               {/* Submit button */}
-              <button
-                type="submit"
-                className="py-2 px-5 bg-blue-600 hover:bg-blue-700 rounded font-semibold transition"
-              >
-                Send message
-              </button>
+              <div className='flex flex-col md:flex-row gap-5'>
+                <button
+                  type="submit"
+                  disabled={status === 'pending'}
+                  className="py-2 px-5 bg-blue-700 hover:bg-blue-800 text-white rounded font-semibold transition"
+                >
+                  {status === 'pending' ? "Sending..." : "Send message"}
+                </button>
 
-              {/* General form status feedback */}
-              {status === 'Sending...' && <p className="text-gray-400">Sending your message...</p>}
-              {status === 'success' && <p className="text-green-400">Email sent successfully!</p>}
-              {status === 'error' && <p className="text-red-400">Error sending email. Please try again later.</p>}
+                {/* General form status feedback */}
+                <div className='flex items-center'>
+                  {status === 'success' && <p className="text-green-400">Email sent successfully!</p>}
+                  {status === 'error' && <p className="text-red-400">Error sending email. Please try again later.</p>}
+                  {errors.captcha && <p className="text-red-400">{errors.captcha}</p>}
+                </div>
+              </div>
             </form>
           </div>
         </div>

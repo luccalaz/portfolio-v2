@@ -32,7 +32,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
   }, []);
 
   return (
-    <section id="hero" className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/hero-bg.jpg)` }} ref={sections.hero}>
+    <section id="hero" className="h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/hero-bg.webp)` }} ref={sections.hero}>
       <div className="container flex gap-10">
         <motion.div 
           initial="hidden"
@@ -90,7 +90,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="basis-2/6 hidden xl:block"
         >
-          <Image className="rounded-2xl" src="/images/hero-img.png" width={500} height={500} alt="Illustration of a developer in a cartoonish style."/>
+          <Image className="rounded-2xl" src="/images/hero-img.webp" width={500} height={500} priority alt="Illustration of a developer in a cartoonish style."/>
         </motion.div>
       </div>
       <motion.a
@@ -101,6 +101,7 @@ const Hero = ({ sections } : { sections: Sections }) => {
           y: { duration: 2, repeat: Infinity, repeatType: "loop", ease: "easeInOut" },
         }}
         href="#projects"
+        aria-label="Scroll down to projects"
         className="absolute bottom-12 left-1/2 transition-colors text-zinc-300 hover:text-zinc-400 hover:cursor-pointer"
       >
         <FaChevronDown />
