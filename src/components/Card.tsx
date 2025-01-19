@@ -20,7 +20,7 @@ const Card = ({ project, index }: { project: Project, index: number }) => {
                     width={1200}
                     height={300}
                     priority
-                    className="object-cover aspect-[16/9] transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover aspect-[16/9] transition-transform duration-300 sm:group-hover:scale-105"
                 />
             </div>
             <div className="2xl:w-2/4 2xl:px-10 p-6 text-zinc-300 flex flex-col justify-start 2xl:justify-center flex-grow">
@@ -54,7 +54,7 @@ const Card = ({ project, index }: { project: Project, index: number }) => {
                     alt="Project Image"
                     width={1200}
                     height={300}
-                    className="object-cover aspect-[16/9] transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover aspect-[16/9] transition-transform duration-300 sm:group-hover:scale-105"
                 />
             </div>
             <div className="p-6 text-zinc-300 flex flex-col justify-start flex-grow">

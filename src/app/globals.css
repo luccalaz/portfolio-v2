@@ -117,5 +117,5 @@ nav:not(.show) {
 
 /* Projects section styles */
 .project-card {
-  @apply overflow-hidden rounded-xl transition-all duration-300 sm:hover:-translate-y-1 hover:cursor-pointer border border-zinc-800 hover:border-zinc-600 bg-zinc-900;
+  @apply overflow-hidden rounded-xl transition-all duration-300 sm:hover:-translate-y-1 sm:hover:cursor-pointer border border-zinc-800 sm:hover:border-zinc-600 bg-zinc-900;
 }
