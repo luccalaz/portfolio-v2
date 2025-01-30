@@ -6,7 +6,6 @@ export interface Sections {
 };
 
 export interface Project {
-    id: number,
     images: string[],
     title: string
     description: string,

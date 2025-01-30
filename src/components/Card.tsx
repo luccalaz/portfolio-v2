@@ -89,7 +89,7 @@ const Card = ({ project, index }: { project: Project; index: number }) => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            key={project.id}
+            key={index}
             onClick={() => window.open(project.url)}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
