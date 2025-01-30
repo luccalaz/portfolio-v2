@@ -7,7 +7,7 @@ export interface Sections {
 
 export interface Project {
     id: number,
-    image: string,
+    images: string[],
     title: string
     description: string,
     url: string,
