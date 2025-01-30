@@ -1,19 +1,30 @@
 [
     {
-        "id": 1,
-        "image": "/images/projects/portfolio-site.png",
-        "title": "Portfolio Website",
-        "description": "This website! Made with mostly what I learned in college as well as a few other things I picked up along the way. This website will be constantly updated with my latest projects and relevant work as a Full-Stack Web Developer.",
+        "images": [
+            "/images/projects/esports/1.png",
+            "/images/projects/esports/2.png",
+            "/images/projects/esports/3.png",
+            "/images/projects/esports/4.png",
+            "/images/projects/esports/5.png",
+            "/images/projects/esports/6.png",
+            "/images/projects/esports/7.png",
+            "/images/projects/esports/8.png",
+            "/images/projects/esports/9.png"
+        ],
+        "title": "E-Sports Lounge Booking System",
+        "description": "An online booking system under development to be used by NSCC’s Truro Campus ESports lounge. This system consists of a public end, where the college’s students and staff are able to book a station in the lounge, and a management panel where lounge staff can adjust availability and fulfill booking requests.",
         "url": "https://github.com/luccalaz/portfolio-v2",
         "isFeatured": true,
-        "tags": ["React", "Next.JS", "TypeScript", "Tailwind CSS"],
-        "buttons": [
-            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio-v2" }
-        ]
+        "tags": ["React", "Next.JS", "TypeScript", "Supabase", "PostgresSQL"],
+        "buttons": []
     },
     {
-        "id": 2,
-        "image": "/images/projects/tech-roster-admin.png",
+        "images": [
+            "/images/projects/techroster/1.png", 
+            "/images/projects/techroster/2.png", 
+            "/images/projects/techroster/3.png",
+            "/images/projects/techroster/4.png"
+        ],
         "title": "Tech Roster Admin",
         "description": "An administration end that allows users to edit the content of the Tech Roster frontend. Made with React and Next.JS using a MongoDB database and the Shadcn UI library. Uses a custom REST API for data handling between the app and database.",
         "url": "https://github.com/luccalaz/tech-roster-admin",
@@ -24,8 +35,7 @@
         ]
     },
     {
-        "id": 3,
-        "image": "/images/projects/launch-pad.png",
+        "images": ["/images/projects/launch-pad.png" ],
         "title": "Launch Pad",
         "description": "A launch pad app made with ASP.NET Core using EF Core. A web app that features authentication and some dashboard customization options, including the ability to pin links, edit categories and light/dark mode.",
         "url": "https://github.com/luccalaz/launch-pad",
@@ -36,8 +46,18 @@
         ]
     },
     {
-        "id": 4,
-        "image": "/images/projects/weather-app.png",
+        "images": ["/images/projects/portfolio-site.png" ],
+        "title": "Portfolio Website",
+        "description": "This website! Made with mostly what I learned in college as well as a few other things I picked up along the way. This website will be constantly updated with my latest projects and relevant work as a Full-Stack Web Developer.",
+        "url": "https://github.com/luccalaz/portfolio-v2",
+        "isFeatured": true,
+        "tags": ["React", "Next.JS", "TypeScript", "Tailwind CSS"],
+        "buttons": [
+            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio-v2" }
+        ]
+    },
+    {
+        "images": ["/images/projects/weather-app.png" ],
         "title": "Weather App",
         "description": "This is a weather app I developed using the OpenWeather API and the OpenMeteo API at the end of my first year in college using vanilla HTML/CSS/JS. I tried to make it a clone of the Apple Weather App and in my opinion it looks pretty close.",
         "url": "https://weatherapp.luccalaz.com/",
@@ -49,8 +69,7 @@
         ]
     },
     {
-        "id": 5,
-        "image": "/images/projects/woocommerce-site.png",
+        "images": ["/images/projects/woocommerce-site.png" ],
         "title": "WooCommerce Store",
         "description": "An e-commerce store I set up for a real client using WordPress and the WooCommerce plugin. Even though there was almost no coding involved (other than a few CSS adjustments), it helped me get used to CMS's and WordPress in general.",
         "url": "https://mljc.ca/",
