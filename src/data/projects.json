@@ -35,7 +35,11 @@
         ]
     },
     {
-        "images": ["/images/projects/launch-pad.png" ],
+        "images": [
+            "/images/projects/launchpad/0.png",
+            "/images/projects/launchpad/1.png",
+            "/images/projects/launchpad/2.png" 
+        ],
         "title": "Launch Pad",
         "description": "A launch pad app made with ASP.NET Core using EF Core. A web app that features authentication and some dashboard customization options, including the ability to pin links, edit categories and light/dark mode.",
         "url": "https://github.com/luccalaz/launch-pad",
