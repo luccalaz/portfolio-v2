@@ -4,7 +4,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Sections } from "@/tools/data.model";
 
 const Contact = ({ sections }: { sections: Sections }) => {
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -23,7 +23,6 @@ const Contact = ({ sections }: { sections: Sections }) => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    if (!formData.subject) newErrors.subject = 'Subject is required';
     if (!formData.message) newErrors.message = 'Message is required';
     return newErrors;
   };
@@ -59,7 +58,7 @@ const Contact = ({ sections }: { sections: Sections }) => {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', message: '' });
         setCaptchaToken(null);
       } else {
         setStatus('error');
@@ -133,25 +132,6 @@ const Contact = ({ sections }: { sections: Sections }) => {
                   required
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
-              </div>
-
-              {/* Subject field */}
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
-                <select
-                  id="subject"
-                  value={formData.subject}
-                  className={`w-full p-2 rounded bg-neutral-800 ${errors.subject ? 'border border-red-500' : 'focus:ring-blue-500'}`}
-                  disabled={status === 'pending'}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="" disabled>Select a subject</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="opportunity">Job Opportunity</option>
-                  <option value="collaboration">Collaboration</option>
-                </select>
-                {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
               </div>
 
               {/* Message field */}
