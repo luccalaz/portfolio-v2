@@ -13,11 +13,12 @@
         ],
         "title": "E-Sports Lounge Booking System",
         "description": "An online booking system under development to be used by NSCC’s Truro Campus ESports lounge. This system consists of a public end, where the college’s students and staff are able to book a station in the lounge, and a management panel where lounge staff can adjust availability and fulfill booking requests.",
-        "url": "https://github.com/luccalaz/e-sports-booking-system",
+        "url": "https://esportslounge.luccalaz.com/",
         "isFeatured": true,
         "tags": ["React", "Next.JS", "TypeScript", "Supabase", "PostgresSQL"],
         "buttons": [
-            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/e-sports-booking-system"}
+            { "type": "primary", "text": "Preview", "url": "https://esportslounge.luccalaz.com/" },
+            { "type": "outline", "text": "Source code", "url": "https://github.com/luccalaz/e-sports-booking-system"}
         ]
     },
     {
