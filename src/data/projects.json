@@ -13,10 +13,12 @@
         ],
         "title": "E-Sports Lounge Booking System",
         "description": "An online booking system under development to be used by NSCC’s Truro Campus ESports lounge. This system consists of a public end, where the college’s students and staff are able to book a station in the lounge, and a management panel where lounge staff can adjust availability and fulfill booking requests.",
-        "url": "https://github.com/luccalaz/portfolio-v2",
+        "url": "https://github.com/luccalaz/e-sports-booking-system",
         "isFeatured": true,
         "tags": ["React", "Next.JS", "TypeScript", "Supabase", "PostgresSQL"],
-        "buttons": []
+        "buttons": [
+            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/e-sports-booking-system"}
+        ]
     },
     {
         "images": [
@@ -31,7 +33,7 @@
         "isFeatured": false,
         "tags": ["React", "Next.JS", "TypeScript", "MongoDB", "Tailwind CSS"],
         "buttons": [
-            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/tech-roster-admin" }
+            { "type": "primary", "text": "Ask for source code", "url": "mailto:luccalazza@gmail.com?subject=Request%20for%20Source%20Code"}
         ]
     },
     {
@@ -46,7 +48,7 @@
         "isFeatured": false,
         "tags": ["ASP.NET Core", "Bootstrap", "MySQL", "Tailwind CSS"],
         "buttons": [
-            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/launch-pad" }
+            { "type": "primary", "text": "Ask for source code", "url": "mailto:luccalazza@gmail.com?subject=Request%20for%20Source%20Code"}
         ]
     },
     {
@@ -57,7 +59,7 @@
         "isFeatured": true,
         "tags": ["React", "Next.JS", "TypeScript", "Tailwind CSS"],
         "buttons": [
-            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio-v2" }
+            { "type": "primary", "text": "Source code", "url": "https://github.com/luccalaz/portfolio-v2"}
         ]
     },
     {
@@ -69,7 +71,7 @@
         "tags": ["HTML", "CSS", "JavaScript"],
         "buttons": [
             { "type": "primary", "text": "Preview", "url": "https://weatherapp.luccalaz.com/" },
-            { "type": "outline", "text": "Source code", "url": "https://github.com/luccalaz/weather-app" }
+            { "type": "outline", "text": "Ask for source code", "url": "mailto:luccalazza@gmail.com?subject=Request%20for%20Source%20Code"}
         ]
     },
     {

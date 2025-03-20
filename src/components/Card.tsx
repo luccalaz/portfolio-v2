@@ -14,7 +14,7 @@ const Card = ({ project, index }: { project: Project; index: number }) => {
 
     useEffect(() => {
         let intervalId: NodeJS.Timeout;
-        
+
         if (isHovering && project.images && project.images.length > 1) {
             intervalId = setInterval(nextImage, 2000); // Change image every 2 seconds
         }
